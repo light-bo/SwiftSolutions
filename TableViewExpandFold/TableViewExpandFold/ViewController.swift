@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     } ()
     
     let defaultCellHeight = 140
-    var heightArr: [CGFloat?] = [140, 140, 140, 140, 140, 140, 140, 140, 140, 140]
+    var heightArr: [CGFloat?] = [CGFloat?](repeating: 140, count: 10)
 }
 
 
@@ -49,7 +49,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return heightArr.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
